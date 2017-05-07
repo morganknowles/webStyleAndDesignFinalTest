@@ -1,0 +1,77 @@
+
+
+.hero-banner {
+	background-image: url(../img/hp-banner.jpg);
+	background-repeat: no-repeat;
+	background-position: 0 0;
+	background-size: cover;
+	color: #FFF;
+	font-weight: 700;
+	display: flex;
+	align-items: center;
+	-webkit-align-items: center;
+	justify-content: center;
+	height: 619px;
+
+	h1 {
+		font-family: $secondary-font;
+		font-size: 3.5em;
+		margin: 0;
+
+		@include respond-to("small") {			/*Step 10*/
+		font-size:2.5em;
+
+		}
+
+		@include respond-to("medium") {
+			font-size: 4em;
+		}
+
+		@include respond-to("large") {
+			font-size: 5em;
+		}
+	}
+
+	p {
+		font-size: 1em;
+	}
+
+	.button {
+		margin-top: 20px;
+	}
+
+	a:hover {
+		background-color: lighten( $primary-color, 10% );
+	}
+
+	.hero-banner-content {
+		text-align: center;
+	}
+}
+
+
+
+
+/* ===================================================================== SHARED CONTENT STYLES */
+
+.grey-bg {
+	background-color: #f5f6f7;
+}
+
+.button {
+	background-color: $primary-color;
+	@include border-radius(20px);
+	color: #FFF;
+	display: inline-block;
+	padding: 8px 50px;
+	text-decoration: none;
+	@include opacity(.5);   /*Step 12*/
+}
+
+.centered {
+	text-align: center;
+}
+
+.right {
+	float: right;
+}

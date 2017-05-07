@@ -1,0 +1,81 @@
+
+
+/* ===================================================================== PRIMARY NAV STYLES */
+
+
+.primary-navigation {
+	@extend %clearfix;
+	visibility: hidden;
+    opacity: 0;
+    height: 0;
+	
+	
+	@include respond-to("medium") {
+		display: block;
+		float: left;
+		height: auto;
+		visibility: visible;
+		opacity: 1;
+	}
+
+	> ul {
+
+		margin: 0;
+		padding: 0;
+
+		@include respond-to("medium") {
+			float: left;
+		}
+
+		> li {
+
+			border: 1px solid grey;
+			list-style-type: none;
+			position: relative;
+			text-align: center;
+			text-transform: uppercase;
+
+			@include respond-to("medium") { 
+				border-top: 2px solid transparent;
+				border-bottom: none;
+				border-right: none;
+				border-left: none;
+				float: left;
+				margin: 0 20px 0 0;
+			}
+
+			> a {
+				color: #FFF;
+				display: block;
+				font-weight: bold;
+				padding: 10px;
+				text-decoration: none;
+
+				@include respond-to("medium") { 
+					padding: 36px 25px;
+				}
+			}
+		}
+	}
+}
+
+.footer-navigation {
+	ul {
+		@extend %clearfix;
+		margin: 0;
+		padding: 0;
+
+		li {
+			float: left;
+			list-style-type: none;
+			margin-right: 10px;
+			text-transform: uppercase;
+
+			a {
+				font-weight: bold;
+				text-decoration: none;
+			}
+		}
+	}
+}
+

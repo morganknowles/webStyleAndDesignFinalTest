@@ -1,0 +1,88 @@
+
+
+/* ===================================================================== FONT STACK */
+
+$primary-font: Arial, Helvetica, sans-serif;
+$secondary-font: 'Roboto Slab', 'Times New Roman', serif;
+
+/* ===================================================================== BASE/BRANDING COLORS */
+
+$primary-color: #16a085;
+
+/* ===================================================================== BASE ELEMENT STYLES */
+
+
+html {
+	font-size: 100%;
+}
+
+body {
+	font-family: $primary-font;
+	font-size: 100%;
+}
+
+
+a,
+a:link,
+a:active {
+	color: $primary-color;
+}
+
+h1 {
+	font-family: $secondary-font;
+	font-size: 38px;
+	text-transform: uppercase;
+}
+
+p, ul {
+	line-height: 1.5;
+}
+
+footer {
+	@extend %clearfix;
+	padding: 40px 0;
+}
+
+section {
+	@extend %clearfix;
+	padding: 50px 0;
+
+			img {
+				border: 5px solid #d5d5d5;
+/*Step 4*/		max-width:100%;            
+				}
+}
+
+
+/* ===================================================================== BASE LAYOUT STYLES */
+
+.content-inner {
+	margin: 0 auto;
+	max-width: 970px;
+	padding: 0 30px;
+	
+
+	@include respond-to("medium") {
+		padding: 0;
+	}
+	h1{
+		@include respond-to("small") {			/*Step 10*/
+			font-size:2em;
+		}
+	}
+}
+
+.content {
+	clear: both;
+
+
+}
+
+
+/* ===================================================================== BASE FORM STYLES */
+
+label {
+	@extend %visuallyhidden;
+}
+
+

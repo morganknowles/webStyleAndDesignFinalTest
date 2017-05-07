@@ -1,0 +1,26 @@
+
+/* =====================================================================  FOCUS AREAS */
+
+.focus-areas {
+
+	@include respond-to("medium") { 	/*step 11 */
+		display: -webkit-flex;
+		display: flex;
+	}
+}
+
+.focus-area {
+	flex-grow: 1;
+	flex-basis: 0;
+	padding: 2%; 						/*step 11*/
+
+	h2 {
+		color: $primary-color;
+		font-family: $secondary-font;
+		text-transform: uppercase;
+	}
+
+	p {
+		line-height: 1.2;
+	}
+}										/*step 11*/

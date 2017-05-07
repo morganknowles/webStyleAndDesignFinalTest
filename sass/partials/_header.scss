@@ -1,0 +1,95 @@
+
+
+header {
+	@extend %clearfix;
+	background-color: #1a1b1c;
+	color: #FFF;
+	padding: 10px 0;
+	width: 100%;
+	float: left;
+	
+	@include respond-to("medium") {
+		padding: 10px 0;
+	}	
+
+	.content-inner {
+		padding: 20px;
+
+		@include respond-to("medium") {
+			padding:0;
+		}
+	}		
+}
+
+.main-logo {
+	@include respond-to("medium") {
+		float: left;
+		margin: 21px 86px 0 0;
+	}
+	
+
+	img {
+		flex-shrink: 0;
+		height: 40px;
+		width: 40px;
+	}
+}
+
+.social-media {
+	@include hide-text;
+	display: none;
+	float: right;
+	margin: 34px 0 0 0;
+	padding: 0;
+
+	@include respond-to("medium") {
+		display: block;
+	}
+	li {
+		float: left;
+		list-style-type: none;
+		margin-right: 12px;
+	}
+	a {
+		&:hover {
+			opacity: .5;
+		}
+	}
+}
+
+%icons {
+	background-position: 0 0;
+	background-repeat: no-repeat;
+	display: block;
+	height: 16px;
+	width: 16px;
+}
+
+.icon-twitter a {
+	background-image: url(../img/twitter.svg);
+	@extend %icons;
+}
+
+.icon-facebook a {
+	background-image: url(../img/facebook.svg);
+	@extend %icons;
+}
+
+.icon-instagram a {
+	background-image: url(../img/instagram.svg);
+	@extend %icons;
+}
+
+.icon-linked-in a {
+	background-image: url(../img/linkedin.svg);
+@extend %icons;
+}
+
+ 
+/* 
+I made the nesting structure easier to follow by adding spaces and tabs.
+I put closing brackets in their correct places.
+I used an extend to make the .icon classes DRY.
+I used shorthand properties in a few places.
+*/
+

@@ -1,0 +1,17 @@
+
+
+// Helpers
+@import 'partials/mixins';
+@import 'partials/extends';
+
+// Base Website Styles
+@import 'partials/normalize';
+@import 'partials/base';
+
+// Content Styles
+@import 'partials/header'; 
+@import 'partials/content';
+@import 'partials/focus-areas';
+
+// Navigation Styles
+@import 'partials/navigation';  

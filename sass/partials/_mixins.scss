@@ -1,0 +1,48 @@
+/* ===================================================================== MEDIA QUERY MIXINS */
+
+$break-medium: 800px;
+$break-large: 1024px;
+$break-small:320px;/*step 10*/
+
+@mixin respond-to($media){
+  
+}
+
+
+@mixin respond-to($media) {      
+                                                               /*step 10*/
+  @if $media == "small" {
+    @media only screen and (max-width: $break-small){@content;}
+  }
+
+	@else if $media == "medium" {
+		@media only screen and (min-width: $break-medium) { @content; }
+	}
+
+	@else if $media == "large" {
+	   @media only screen and (min-width: $break-large) { @content; }
+	 }
+}
+
+/* ===================================================================== HELPER MIXINS */
+
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  border-radius: $radius;
+  background-clip: padding-box;  /* stops bg color from leaking outside the border: */
+}
+
+
+@mixin opacity($opacity) {
+  opacity: $opacity;
+  $opacity-ie: $opacity * 100;
+  filter: alpha(opacity=$opacity-ie); //IE8
+}
+
+@mixin hide-text{
+    overflow:hidden;
+    text-indent:-9000px;
+    display:block;
+}
+
